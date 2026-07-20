@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facaifu</title>
+    <title>TECH LAB</title>
     <style>
         * {
             margin: 0;
@@ -117,7 +117,6 @@
             cursor: pointer;
             transition: 0.3s;
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
-            z-index: 1;
         }
 
         .banner button:hover {
@@ -231,6 +230,31 @@
                 padding: 25px;
             }
         }
+
+        /* 新页面样式 */
+        .new-page {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            background: #0a0e27;
+            padding: 80px 5%;
+            text-align: center;
+            color: white;
+        }
+
+        .new-page h2 {
+            font-size: 36px;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+
+        .new-page p {
+            color: #aeb7df;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -239,7 +263,6 @@
         <div class="logo">TECH LAB</div>
         <div class="nav-link">
             <a href="#">首页</a>
-            <a href="#">联系</a>
         </div>
     </nav>
 
@@ -247,7 +270,7 @@
     <div class="banner">
         <h1>全能工具</h1>
         <p>智能、高效、可靠的数字化体验</p>
-        <button onclick="openInnerPage()">赶紧进来</button>
+        <button onclick="showNewPage()">赶紧进来</button>
     </div>
 
     <!-- 主体内容 -->
@@ -258,39 +281,36 @@
         </div>
         <div class="card-wrap">
             <div class="card">
-                <h3>智能系统</h3>
-                <p>基于智能算法与数据处理能力，为业务提供快速分析、判断与决策支持。</p>
+                <h3>一个人</h3>
+                <p>做的</p>
             </div>
             <div class="card">
-                <h3>高速运算</h3>
-                <p>采用高效计算架构，提升数据处理效率，降低响应时间与运行成本。</p>
+                <h3>高速运算的ai太好用了</h3>
+                <p>非常好</p>
             </div>
             <div class="card">
-                <h3>安全防护</h3>
-                <p>多层安全机制保护数据传输与存储，降低风险，提升系统稳定性。</p>
+                <h3>安全防护=没有</h3>
+                <p>没有稳定性</p>
             </div>
         </div>
     </div>
 
-    <!-- 模拟的内层页面，这里简单用一个弹窗模拟 -->
-    <div id="innerPage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 14, 39, 0.85); border: 1px solid rgba(99, 102, 241, 0.3); padding: 30px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);">
-        <h2 style="background: linear-gradient(90deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">哈基米南北绿豆</h2>
-        <p style="color: #aeb7df;">这里是具有科技感的内容区域。</p>
-        <button style="padding: 10px 20px; border: 1px solid rgba(139, 92, 246, 0.6); border-radius: 20px; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; cursor: pointer;" onclick="closeInnerPage()">关闭</button>
+    <!-- 新页面 -->
+    <div class="new-page" id="newPage">
+        <h2>哈基米南北绿豆</h2>
+        <p>这里是新页面的更多内容展示区域。</p>
     </div>
 
     <script>
-        function openInnerPage() {
-            document.getElementById('innerPage').style.display = 'block';
-        }
-        function closeInnerPage() {
-            document.getElementById('innerPage').style.display = 'none';
+        function showNewPage() {
+            document.getElementById('newPage').style.display = 'block';
+            // 如果需要隐藏当前页面其他部分，可以添加相关代码
         }
     </script>
 
     <!-- 页脚 -->
     <footer>
-        <p>© 2026 Facaifu 版权所有</p>
+        <p>© 2026 Facailfu 版权所有</p>
     </footer>
 </body>
 </html>
