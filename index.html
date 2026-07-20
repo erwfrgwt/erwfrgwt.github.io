@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECH LAB</title>
+    <title>Facaifu</title>
     <style>
         * {
             margin: 0;
@@ -245,9 +245,9 @@
 
     <!-- 横幅 -->
     <div class="banner">
-        <h1>未来科技解决方案</h1>
+        <h1>全能工具</h1>
         <p>智能、高效、可靠的数字化体验</p>
-        <button>立即体验</button>
+        <button onclick="openInnerPage()">赶紧进来</button>
     </div>
 
     <!-- 主体内容 -->
@@ -272,9 +272,25 @@
         </div>
     </div>
 
+    <!-- 模拟的内层页面，这里简单用一个弹窗模拟 -->
+    <div id="innerPage" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(10, 14, 39, 0.85); border: 1px solid rgba(99, 102, 241, 0.3); padding: 30px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);">
+        <h2 style="background: linear-gradient(90deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">哈基米南北绿豆</h2>
+        <p style="color: #aeb7df;">这里是具有科技感的内容区域。</p>
+        <button style="padding: 10px 20px; border: 1px solid rgba(139, 92, 246, 0.6); border-radius: 20px; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; cursor: pointer;" onclick="closeInnerPage()">关闭</button>
+    </div>
+
+    <script>
+        function openInnerPage() {
+            document.getElementById('innerPage').style.display = 'block';
+        }
+        function closeInnerPage() {
+            document.getElementById('innerPage').style.display = 'none';
+        }
+    </script>
+
     <!-- 页脚 -->
     <footer>
-        <p>© 2026 Tech Lab 版权所有</p>
+        <p>© 2026 Facaifu 版权所有</p>
     </footer>
 </body>
 </html>
