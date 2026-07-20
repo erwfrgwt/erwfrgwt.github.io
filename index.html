@@ -32,6 +32,7 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .logo {
@@ -200,6 +201,29 @@
             line-height: 1.8;
         }
 
+        /* 弹窗页面样式 */
+        .new-page {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            background: #0a0e27;
+            padding: 80px 5%;
+            text-align: center;
+            color: white;
+        }
+        .new-page h2 {
+            font-size: 36px;
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+        .new-page p {
+            color: #aeb7df;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
         /* 页脚 */
         footer {
             width: 100%;
@@ -229,31 +253,6 @@
             .card {
                 padding: 25px;
             }
-        }
-
-        /* 新页面样式 */
-        .new-page {
-            display: none;
-            width: 100%;
-            min-height: 100vh;
-            background: #0a0e27;
-            padding: 80px 5%;
-            text-align: center;
-            color: white;
-        }
-
-        .new-page h2 {
-            font-size: 36px;
-            background: linear-gradient(90deg, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 30px;
-        }
-
-        .new-page p {
-            color: #aeb7df;
-            line-height: 1.6;
-            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -295,16 +294,16 @@
         </div>
     </div>
 
-    <!-- 新页面 -->
+    <!-- 跳转弹窗页面 -->
     <div class="new-page" id="newPage">
         <h2>哈基米南北绿豆</h2>
-        <p>这里是新页面的更多内容展示区域。</p>
+        <p>保持统一深色科技风格，这里是工具内页区域</p>
     </div>
 
+    <!-- JS脚本 -->
     <script>
         function showNewPage() {
             document.getElementById('newPage').style.display = 'block';
-            // 如果需要隐藏当前页面其他部分，可以添加相关代码
         }
     </script>
 
