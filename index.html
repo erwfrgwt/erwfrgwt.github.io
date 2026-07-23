@@ -108,19 +108,21 @@
             z-index: 1;
         }
 
-        .banner button {
+        .banner a.button {
+            display: inline-block;
             padding: 14px 36px;
             border: 1px solid rgba(139, 92, 246, 0.6);
             border-radius: 30px;
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             font-size: 16px;
-            cursor: pointer;
+            text-decoration: none;
             transition: 0.3s;
             box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+            z-index: 1;
         }
 
-        .banner button:hover {
+        .banner a.button:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 35px rgba(139, 92, 246, 0.7);
         }
@@ -201,29 +203,6 @@
             line-height: 1.8;
         }
 
-        /* 弹窗页面样式 */
-        .new-page {
-            display: none;
-            width: 100%;
-            min-height: 100vh;
-            background: #0a0e27;
-            padding: 80px 5%;
-            text-align: center;
-            color: white;
-        }
-        .new-page h2 {
-            font-size: 36px;
-            background: linear-gradient(90deg, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 30px;
-        }
-        .new-page p {
-            color: #aeb7df;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
         /* 页脚 */
         footer {
             width: 100%;
@@ -269,7 +248,8 @@
     <div class="banner">
         <h1>全能工具</h1>
         <p>智能、高效、可靠的数字化体验</p>
-        <button onclick="showNewPage()">赶紧进来</button>
+        <!-- 核心：点击直接跳转目标网址 -->
+        <a href="https://facaifu.github.io/1/" target="_self" class="button">赶紧进来</a>
     </div>
 
     <!-- 主体内容 -->
@@ -293,19 +273,6 @@
             </div>
         </div>
     </div>
-
-    <!-- 跳转弹窗页面 -->
-    <div class="new-page" id="newPage">
-        <h2>哈基米南北绿豆</h2>
-        <p>保持统一深色科技风格，这里是工具内页区域</p>
-    </div>
-
-    <!-- JS脚本 -->
-    <script>
-        function showNewPage() {
-            document.getElementById('newPage').style.display = 'block';
-        }
-    </script>
 
     <!-- 页脚 -->
     <footer>
